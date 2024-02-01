@@ -1,8 +1,8 @@
-async function start() {
+ function start() {
     let characterCardBox = document.querySelector('#character-card-box');
     let characterModalBox = document.querySelector('#character-modal-box');
-    let characters = await fetchCharacters();
+    let characters =  fetchCharacters();
 
-    characterCardBox.innerHTML = getCharacterCards(characters).join('');
-    characterModalBox.innerHTML = getCharacterModals(characters).join('');
+     characterCardBox.innerHTML = getCharacterCards(characters).join('');
+     characterModalBox.innerHTML = getCharacterModals(characters).join('');
 }

@@ -81,9 +81,13 @@ function getCharacterModal(character) {
 /**
  * получим информацию о персонажах с API
  */
+
 function fetchCharacters() {
-    // TODO 1
-}
+     fetch('./characters.json').then(res =>res.json()).then(json =>console.log(json));
+   
+    };
+  
+
 
 /**
  * Получить массив карточек персонажей
@@ -92,6 +96,13 @@ function fetchCharacters() {
  * @returns {Array}
  */
 function getCharacterCards(characters) {
+    let arr=[];
+    for(let i=0; i < characters.length; i++){
+        let character = characters[i];
+        let card = getCharacterCard(character);
+        arr.push(card);
+    }
+    return arr;
     // TODO 2
     // characters.length - длина массива characters
 }
